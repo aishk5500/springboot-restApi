@@ -12,4 +12,8 @@ public class DummyController {
         System.out.println("hi");
         return "hi";
     }
+    @GetMapping("/hello")
+    public static String sayHello(){
+        return "Hello";
+    }
 }
