@@ -32,7 +32,7 @@ public class Course {
     }
 
     public String getDesc() {
-        return desc;
+        return this.desc;
     }
 
     public void setDesc(String desc) {
