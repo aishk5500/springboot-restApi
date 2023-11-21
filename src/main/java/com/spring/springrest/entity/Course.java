@@ -1,18 +1,22 @@
 package com.spring.springrest.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@EntityScan
+
+@Entity
 public class Course {
+    @Id
     private long id;
     private String title;
-    private String desc;
+    private String description;
 
-    public Course(int i, String title, String desc) {
+    public Course(int i, String title, String description) {
     }
 
     public long getId() {
@@ -32,10 +36,10 @@ public class Course {
     }
 
     public String getDesc() {
-        return this.desc;
+        return this.description;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDesc(String description) {
+        this.description = description;
     }
 }
